@@ -4,33 +4,22 @@
     package="com.villagelink.app">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="乡村链接"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.VillageLink"
         android:usesCleartextTraffic="true"
-        tools:replace="android:allowBackup,android:usesCleartextTraffic">
+        tools:replace="android:allowBackup,android:usesCleartextTraffic"
+        android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
         <activity
-            android:name=".SplashActivity"
+            android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Splash">
+            android:screenOrientation="portrait">
             
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"/>
     </application>
 </manifest>
