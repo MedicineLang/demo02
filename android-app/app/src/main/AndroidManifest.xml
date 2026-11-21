@@ -30,7 +30,7 @@
         android:usesCleartextTraffic="false"
         android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/Theme.VillageLink"
-        tools:replace="android:allowBackup">
+        tools:replace="android:allowBackup,android:usesCleartextTraffic">
 
         <provider
             android:name="com.qq.e.comm.GDTFileProvider"
@@ -57,10 +57,12 @@
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="true"
             android:screenOrientation="portrait">
-            <intent-filter>
+            
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
+
 </manifest>
